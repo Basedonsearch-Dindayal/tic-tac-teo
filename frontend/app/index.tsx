@@ -63,6 +63,9 @@ export default function TicTacToe() {
         style={styles.cell}
         onPress={() => handlePress(index)}
         activeOpacity={0.7}
+        accessible={true}
+        accessibilityLabel={`Cell ${index + 1}, ${board[index] || 'empty'}`}
+        accessibilityRole="button"
       >
         <Text style={styles.cellText}>{board[index]}</Text>
       </TouchableOpacity>
